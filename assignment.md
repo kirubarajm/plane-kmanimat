@@ -15,16 +15,50 @@ In this assignment, we will make use of an existing but unfamiliar codebase for 
 
 Important: you should not fork or try to push changes to the main plane project for this assignment! You should use the version produced by GitHub classroom. 
 
+## Requirements
+
+Regardless of how you run it:
+1. Google Chrome (which has lighthouse enabled in developer tools by default).
+
+To run locally (recommended), required:
+2. docker/docker desktop
+
+Recommended: 
+3. VSCode with the devcontainer extension installed.
+
 ## Building and running plane
 
-We have configured the assignment to enable the use of codespaces again for this assignment.  
+Unlike the previous assignments, we recommend that you try to build and run
+plane (and complete the assignment) locally rather than using codespaces.
+Codespaces can build/deploy plane locally but there is an intermittent failure
+in port forwarding that causes a bade gateway error when attempting to navigate
+to/load the plane web application.  This is a problem in the integration between
+docker/devcontainer and codespaces.  Plane also runs arbitrarily slowly within
+codespaces, and given the rapid iteration you are likely to engage in in this
+assignment (and the inclusion of performance metrics in the lighthouse suite),
+you're likely to have a more indicative and less frustrating experience locally,
+while avoiding problems with limits on the number of codespaces minutes
+available to you/the course. 
 
-To run plane within codespaces, go to Terminal and run ./setup.sh
+We have had good luck using VSCode with the devcontainer extension installed.
+Regardless of your chosen environment, the fastest way to deploy a version of
+plane locally is, in a terminal, to run ./setup.sh, and then docker compose
+using the docker-compose-local.yml (we do this in VSCode by right-clicking on
+the yml file and selecting "docker compose up"; running it in a terminal window
+will presumably also work).
 
-And then right-click on docker-compose-local.yml in the file list to the left-hand-side of the codespaces VSCode and select "Compose Up."
+If you have trouble running things locally and would like to try in a codespaces
+environment, we recommend selecting a larger machine than the smallest default.
+We had no trouble getting the docker image to build/run, but did face
+intermediate problems accessing the deployed website. 
 
-When successful, the docker compose process may print a message informing you that the server is running at a URL.  We have periodically encountered a "Bad Gateway" error when following that link.  However, if you select the "Ports" tab next to "Terminal", and copy  the "Forwarded Address" item shown for port 80 and paste it into a different browser tab, the web page has successfully loaded for us. 
+When successful, by default, on your local environment, the website will be
+listening at port 80; you can navigate to localhost within the Chrome browser to
+access it.  Within codespaces, you can copy the local link in the "port" tab of
+the codespaces VSCode window and paste it in a new tab.  
 
+
+# Tasks
 
 ## Task 1: Identify Issues Using Lighthouse
 
@@ -33,5 +67,7 @@ When successful, the docker compose process may print a message informing you th
 3. Screenshot to show success
 
 ## Task 2: 
+
+
 
 
