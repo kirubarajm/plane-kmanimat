@@ -44,27 +44,34 @@ Recommended:
 
 Unlike the previous assignments, we recommend that you try to build and run
 plane (and complete the assignment) locally rather than using codespaces.
-Codespaces can build/deploy plane locally but there is an intermittent failure
-in port forwarding that causes a bade gateway error when attempting to navigate
-to/load the plane web application.  This is a problem in the integration between
-docker/devcontainer and codespaces.  Plane also runs arbitrarily slowly within
-codespaces, and given the rapid iteration you are likely to engage in in this
-assignment (and the inclusion of performance metrics in the lighthouse suite),
-you're likely to have a more indicative and less frustrating experience locally,
+
+
+### Building plane locally
+
+We have had good luck using VSCode with the devcontainer extension installed.
+Regardless of your environment, the fastest way to deploy a version of
+plane locally is, in a terminal, to run ./setup.sh, and then docker compose
+using the docker-compose-local.yml in the repository.  We do this in VSCode by right-clicking on
+the yml file and selecting "docker compose up"; running it in a terminal window
+will presumably also work.
+
+### Why not codespaces?
+
+Codespaces can build/deploy plane. However, there is an intermittent failure
+in port forwarding that causes a bade gateway error when attempting to
+load deployed the plane web application due to a problem in the integration between
+docker/devcontainer and codespaces.  Plane also runs somewhat slowly in
+codespaces, and given the rapid iteration you'll be using in this
+assignment, you're likely to have a less frustrating experience locally,
 while avoiding problems with limits on the number of codespaces minutes
 available to you/the course. 
 
-We have had good luck using VSCode with the devcontainer extension installed.
-Regardless of your chosen environment, the fastest way to deploy a version of
-plane locally is, in a terminal, to run ./setup.sh, and then docker compose
-using the docker-compose-local.yml (we do this in VSCode by right-clicking on
-the yml file and selecting "docker compose up"; running it in a terminal window
-will presumably also work).
-
-If you have trouble running things locally and would like to try in a codespaces
+If you have trouble running plane locally and would like to try in a codespaces
 environment, we recommend selecting a larger machine than the smallest default.
 We had no trouble getting the docker image to build/run, but did face
 intermediate problems accessing the deployed website. 
+
+### Accessing the deployed web app
 
 When successful, by default, on your local environment, the website will be
 listening at port 80; you can navigate to localhost within the Chrome browser to
