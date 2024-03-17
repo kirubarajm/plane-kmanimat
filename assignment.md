@@ -20,6 +20,7 @@ codebase, and so lack of familiarity with Django should not hinder you.
 ## GitHub classroom
 
 We use GitHub classroom to distribute and manage this assignment.  
+
 Be sure to push your changes to GitHub and ensure that all of your changes are
 on the main branch at the time of submission so that the course staff can
 provide feedback.
@@ -32,7 +33,7 @@ for this assignment! You should use the version produced by GitHub classroom.
 ## Requirements
 
 Regardless of how you run it:
-* Google Chrome (which has lighthouse enabled in developer tools by default).
+* A browswer with lighthouse available in developer tools (Chrome or Edge both qualify; we have only confirmed functionality in Chrome)
 
 To run locally (recommended), required:
 * docker/docker desktop
@@ -45,12 +46,11 @@ Recommended:
 Unlike the previous assignments, we recommend that you try to build and run
 plane (and complete the assignment) locally rather than using codespaces.
 
-
 ### Building plane locally
 
 We have had good luck using VSCode with the devcontainer extension installed.
 Regardless of your environment, the fastest way to deploy a version of
-plane locally is, in a terminal, to run ./setup.sh, and then docker compose
+plane locally is, in a terminal (integrated in VSCode or otherwise), to run ./setup.sh, and then docker compose
 using the docker-compose-local.yml in the repository.  We do this in VSCode by right-clicking on
 the yml file and selecting "docker compose up"; running it in a terminal window
 will presumably also work.
@@ -58,18 +58,13 @@ will presumably also work.
 ### Why not codespaces?
 
 Codespaces can build/deploy plane. However, there is an intermittent failure
-in port forwarding that causes a bade gateway error when attempting to
-load deployed the plane web application due to a problem in the integration between
-docker/devcontainer and codespaces.  Plane also runs somewhat slowly in
+in port forwarding due to an integration problem between docker and codespaces that causes a bade gateway error when attempting to
+load deployed the plane web application.  Plane also runs somewhat slowly in
 codespaces, and given the rapid iteration you'll be using in this
-assignment, you're likely to have a less frustrating experience locally,
-while avoiding problems with limits on the number of codespaces minutes
-available to you/the course. 
+assignment, you're likely to find local deployment less frustrating, and avoid running into limitations on available codespaces minutes. 
 
 If you have trouble running plane locally and would like to try in a codespaces
 environment, we recommend selecting a larger machine than the smallest default.
-We had no trouble getting the docker image to build/run, but did face
-intermediate problems accessing the deployed website. 
 
 ### Accessing the deployed web app
 
@@ -78,7 +73,7 @@ listening at port 80; you can navigate to localhost within the Chrome browser to
 access it.  Within codespaces, you can copy the local link in the "port" tab of
 the codespaces VSCode window and paste it in a new tab.  
 
-### Initial Configuration
+### Initial plane configuration
 
 The first time you load the plane web app locally, you will see a message
 indicating that the instance must be configured by an administrator.
@@ -91,25 +86,29 @@ return to localhost to see the initial front page.
 We recommend you experiment a bit with the application to learn its features;
 you can make a dummy project, for example.
 
+### Running Lighthouse
+
+Lighthouse is an open source tool provided by Google that analyzes web apps for problems with respect to accessibility, performance, and SEO. It is installed by default in Google Chrome. To run it, go to View->Developer->Developer Tools; Lighthouse is one of the available tabs.  Open the developer tools on the web page/application you wish to analyze and click "analyze page load" to produce a report. 
+
 # Tasks
 
 ## Task 1: run lighthouse
 
-1. Get the code running so that the real front page is showing at minimum.
-2. Run lighthouse, investigate the output/report.  You can probably deselect
-   "SEO" but it's also fine to run the default.  We select "desktop" instead of
-   "mobile" but don't actually care. 
-3. Screenshot to show success
-4. Investigate the 3 user modes: Navigation mode, Timespan mode, Snapshot mode. 
+1. Install, deploy, and perform a basic configuration of the plane web app. Navigate to the front page (at least).  You can also analyze plane open to a project or other internal page; you just want to be past the initial "configuration required" frontpage.
+2. Run lighthouse, and investigate the output/report. The default settings are fine, though we selected "desktop" instead of
+   "mobile" (it likely doesn't matter, so long as you're consistent).
+3. Investigate the 3 user modes, Navigation, Timespan, and Snapshot, to understand their differences. 
+4. In REPORT.md and your repository, provide a screenshot of the analysis report to demonstrate success. 
 
-## Task 2: fix issues across at least 2 categories. 
+## Task 2: fix issues across at least two analyzed categories. 
 
 When we run lighthouse, the only score at 100% that we see is "Best Practices".
 
-For this task, you are to address 3 separate concerns to bring up the
-scores in at least Accessibility and Performance; you may also instead choose a
-concern under "SEO" as one of the 3, but may focus only on the first two if you
+For this task, you are to modify the plane application so as to address 3 separate concerns, and improve the plane scores in at least the Accessibility and Performance categories.   You may choose a
+concern under "SEO" as one of the three concerns you tackle, but may focus only on the first two if you
 prefer.
+
+The intention is to have you track down and address three different types of issues. You do not need to achieve perfection on any of these issues, so long as the scores improve.  For example, if the plane application used deprecated APIs (one of the "Best Practices" categories), it would be acceptable to replaces or fix only a subset of them.  
 
 Commit all such changes to your repository.
 
@@ -130,7 +129,7 @@ Finally, include a screenshot of the new Lighthouse scores.
 
 ## Task 4: Reflection
 
-Finally, you should write a brief reflection (roughly 400 to 500 words) in your
+Finally, you should write a brief reflection (roughly 300 to 400 words) in your
 REPORT.md that answers the following questions:
 
 * Which archaeology or information gathering strategies were most successful for you? Were any unsuccessful?
@@ -138,6 +137,7 @@ REPORT.md that answers the following questions:
 * What are your impressions of lighthouse (run in any of the modes you find interesting) as a metrics suite? 
 
 ## Submission and Feedback
+
 There is no separate submission mechanism for this homework. All activities
 should be completed within the repository. 
 
