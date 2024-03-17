@@ -123,21 +123,19 @@ bring up the scores in Lighthouse.  For each issue, provide:
 
 * a brief description of the issue (repeating the text from Lighthouse is fine)
 * a link to the last commit that completes your changes addressing the issue
-* a brief summary of the archaeology strategy you used to track down the issue in the
+* a brief summary of the archaeology strategy you used to track down and address the issue in the
   codebase 
 
 Finally, include a screenshot of the new Lighthouse scores.
 
 ## Task 4: Reflection
 
-Finally, you should write a brief reflection (roughly 200 to 300 words) in your
+Finally, you should write a brief reflection (roughly 400 to 500 words) in your
 REPORT.md that answers the following questions:
 
-
-
-What was something new that you learned in this assignment?
-Were there any testing or refactoring strategies that didn’t work as well as you expected?
-If you could rewrite the Love Letter codebase, how would you do things differently?
+* Which archaeology or information gathering strategies were most successful for you? Were any unsuccessful?
+* What did you learn about how plane works or is architected?
+* What are your impressions of lighthouse (run in any of the modes you find interesting) as a metrics suite? 
 
 ## Submission and Feedback
 There is no separate submission mechanism for this homework. All activities
