@@ -53,7 +53,7 @@ Regardless of your environment, the fastest way to deploy a version of
 plane locally is, in a terminal (integrated in VSCode or otherwise), to run ./setup.sh, and then docker compose
 using the docker-compose-local.yml in the repository.  We do this in VSCode by right-clicking on
 the yml file and selecting "docker compose up"; running it in a terminal window
-will presumably also work.
+will presumably also work, reference the original plane README for guidance.
 
 ### Why not codespaces?
 
@@ -132,8 +132,8 @@ Finally, include a screenshot of the new Lighthouse scores.
 Finally, you should write a brief reflection (roughly 300 to 400 words) in your
 REPORT.md that answers the following questions:
 
-* Which archaeology or information gathering strategies were most successful for you? Were any unsuccessful?
 * What did you learn about how plane works or is architected?
+* Which archaeology or information gathering strategies were most successful for you? Were any unsuccessful? Why do you think they worked/didn't work?
 * What are your impressions of lighthouse (run in any of the modes you find interesting) as a metrics suite? 
 
 ## Submission and Feedback
