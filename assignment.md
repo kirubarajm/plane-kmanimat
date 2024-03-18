@@ -55,6 +55,13 @@ using the docker-compose-local.yml in the repository.  We do this in VSCode by r
 the yml file and selecting "docker compose up"; running it in a terminal window
 will presumably also work.
 
+#### Steps - 
+
+1. Clone the repository from GitHub classroom.
+2. Run./setup.sh on the terminal
+3. Right click on docker-compose-local.yml on VSCode and select "docker compose up"
+4. Once plane is running, you can access it at http://localhost:80
+
 ### Why not codespaces?
 
 Codespaces can build/deploy plane. However, there is an intermittent failure
@@ -78,10 +85,12 @@ the codespaces VSCode window and paste it in a new tab.
 The first time you load the plane web app locally, you will see a message
 indicating that the instance must be configured by an administrator.
 
-To configure the instance, navigate to localhost/god-mode.  You can login with
-anything that looks like an email address (e.g., admin@admin.com) and enter any
-password.  Once logged in, no changes need to be made, just select "save" and
-return to localhost to see the initial front page.
+To configure the instance, 
+
+1. navigate to http://localhost/god-mode.  
+2. You can login with anything that looks like an email address (e.g., admin@admin.com) and enter any
+password.
+3.  Once logged in, no changes need to be made, just select "save" and return to localhost to see the initial front page.
 
 We recommend you experiment a bit with the application to learn its features;
 you can make a dummy project, for example.
